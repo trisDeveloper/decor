@@ -1,0 +1,239 @@
+@import "bootstrap";
+@import "./../../App.scss";
+@font-face {
+  font-family: "Train One";
+  src: url("./../../assets/fonts/TrainOne-Regular.ttf") format("truetype");
+}
+
+/*
+  // .navbar {
+  //   display: flex;
+  //   background-color: white;
+  //   padding: 0 25px;
+  //   z-index: 99;
+  //   height: 65px;
+  //   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  //     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  //   .container {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     .logo {
+  //       text-decoration: none;
+  //       font-size: 22px;
+  //       color: #0ea598;
+  //       font-weight: bold;
+  //       font-family: sans-serif;
+  //       img {
+  //         width: 40px;
+  //       }
+  //     }
+  //     .links {
+  //       position: relative;
+  //       .link {
+  //         position: relative;
+  //         text-decoration: none;
+  //         margin: 0 20px;
+  //         padding: 20px 0;
+  //         font-size: 18px;
+  //         color: #404040;
+  //         transition: 0.3s ease-in-out;
+  //         &:hover {
+  //           color: #000;
+  //         }
+  //       }
+  //       .link::after {
+  //         position: absolute;
+  //         content: "";
+  //         background-color: #5de7da;
+  //         height: 5px;
+  //         width: 0px;
+  //         left: 0;
+  //         bottom: -2px;
+  //         transition: 0.3s ease-in-out;
+  //       }
+  //       .link:hover::after {
+  //         width: 100%;
+  //       }
+  //     }
+  //   }
+
+  //   .menu-icon {
+  //     cursor: pointer;
+  //     position: absolute;
+  //     top: 20px;
+  //     right: 25px;
+  //     height: 25px;
+  //     width: auto;
+  //   }
+  //   .mobile-nav {
+  //     display: flex;
+  //     width: 70%;
+  //     max-width: 250px;
+  //     flex-direction: column;
+  //     position: fixed;
+  //     height: 100%;
+  //     background-color: #333;
+  //     top: 65px;
+  //     right: 0;
+  //     border-left: 1px solid #e7e7e7;
+  //     border-top: 1px solid #e7e7e7;
+
+  //     .link {
+  //       display: block;
+  //       padding: 18px;
+  //       border-bottom: 1px solid #575757;
+  //       color: #eeeeee;
+  //       &:hover {
+  //         color: white;
+  //       }
+  //     }
+  //   }
+  // }
+*/
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  transition: top 0.4s;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 0;
+  z-index: 999;
+  overflow: hidden;
+  height: 50px;
+  font-family: monospace;
+  transition: all 0.5s ease-in-out;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      .logo-first {
+        display: inline-block;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 600;
+        text-shadow: 9px -7px 0px #708e6f;
+        font-family: "Train One";
+      }
+      .logo-rest {
+        overflow: hidden;
+        display: inline-block;
+        span {
+          color: #ffffff;
+          font-size: 17px;
+          padding-left: 4px;
+          position: relative;
+          transition: all 0.5s ease-in-out;
+          right: 100px;
+        }
+      }
+
+      &:hover span {
+        display: inline-block;
+        right: 0px;
+      }
+    }
+    .menu-icon {
+      cursor: pointer;
+
+      display: none;
+      .icon {
+        height: 20px;
+        color: white;
+      }
+    }
+    .links {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      min-height: 50px;
+      li {
+        list-style: none;
+        padding: 0 0 0 30px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+        transform: translateY(-50px);
+
+        .link {
+          position: relative;
+          color: #ffffff;
+          font-size: 14px;
+          height: 49px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            color: #93c191;
+          }
+        }
+      }
+      li:nth-of-type(1) {
+        animation: nav-items-down 0.4s 1.5s forwards ease-out;
+      }
+      li:nth-of-type(2) {
+        animation: nav-items-down 0.4s 1.6s forwards ease-out;
+      }
+      li:nth-of-type(3) {
+        animation: nav-items-down 0.4s 1.7s forwards ease-out;
+      }
+      li:last-of-type {
+        animation: nav-items-down 0.4s 1.8s forwards ease-out;
+      }
+    }
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: flex;
+      }
+      .links {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        bottom: 100%;
+        left: 0;
+        z-index: -1;
+        height: calc(100vh - 50px);
+        background-color: black;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+        li {
+          padding: 30px;
+          width: 100%;
+          &:hover {
+            background-color: #000c06;
+          }
+          .link {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes nav-items-down {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

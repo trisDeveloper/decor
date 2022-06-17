@@ -1,0 +1,45 @@
+@media (min-width: 768px) {
+  .social-media {
+    position: fixed;
+    display: flex;
+    bottom: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 98px;
+    align-items: center;
+    color: white;
+    animation: fadeIn 1s 3.7s backwards;
+    z-index: 9999;
+    &::after {
+      content: "";
+      background-color: white;
+      position: fixed;
+      height: 50px;
+      bottom: 0;
+      width: 1.5px;
+    }
+    a .media {
+      padding-bottom: 20px;
+      cursor: pointer;
+      font-size: 20px;
+      color: white;
+    }
+    .ig:hover {
+      color: pink;
+    }
+    .fb:hover {
+      color: rgb(47, 66, 195);
+    }
+    .tw:hover {
+      color: rgb(100, 178, 231);
+    }
+    .in:hover {
+      color: rgb(0, 113, 128);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .social-media {
+    display: none;
+  }
+}
