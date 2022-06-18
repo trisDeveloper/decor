@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/decor/static/css/main.5d823297.css",
+    "main.js": "/decor/static/js/main.ad7ce3e6.js",
+    "static/js/787.ec704a7a.chunk.js": "/decor/static/js/787.ec704a7a.chunk.js",
+    "static/media/39.mp4": "/decor/static/media/39.20bc73fea06b46720256.mp4",
+    "static/media/TrainOne-Regular.ttf": "/decor/static/media/TrainOne-Regular.2af777d61f9f995b70ad.ttf",
+    "static/media/Roboto-Medium.ttf": "/decor/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
+    "static/media/Roboto-Thin.ttf": "/decor/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
+    "static/media/Roboto-Regular.ttf": "/decor/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/Roboto-Black.ttf": "/decor/static/media/Roboto-Black.cf56c1b149d0a5e8d7c6.ttf",
+    "static/media/Roboto-Bold.ttf": "/decor/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
+    "static/media/Roboto-Light.ttf": "/decor/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
+    "index.html": "/decor/index.html",
+    "main.5d823297.css.map": "/decor/static/css/main.5d823297.css.map",
+    "main.ad7ce3e6.js.map": "/decor/static/js/main.ad7ce3e6.js.map",
+    "787.ec704a7a.chunk.js.map": "/decor/static/js/787.ec704a7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d823297.css",
+    "static/js/main.ad7ce3e6.js"
+  ]
+}
