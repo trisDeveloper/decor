@@ -16,7 +16,7 @@ function Index() {
       </span>
     );
   };
-  const [letterClass, setLetterClass] = useState("text-animate");
+  const [letterClass] = useState("text-animate");
   const nameArray = ["Wanna", " ", "Change", " ", "Your", " ", "DECORATION!"];
   let idxnum = nameArray.length;
 
