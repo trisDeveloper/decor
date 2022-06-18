@@ -2,33 +2,50 @@ body {
   font-family: monospace;
 }
 
-@import "animate.css";
+@import 'animate.css';
 
 @font-face {
-  font-family: "Roboto Black";
-  src: url("./assets/fonts/Roboto-Black.ttf") format("truetype");
+  font-family: 'Roboto Black';
+  src: url('./assets/fonts/Roboto-Black.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Robot bold";
-  src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-family: 'Robot bold';
+  src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto Light";
-  src: url("./assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-family: 'Roboto Light';
+  src: url('./assets/fonts/Roboto-Light.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto Medium";
-  src: url("./assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-family: 'Roboto Medium';
+  src: url('./assets/fonts/Roboto-Medium.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto Regular";
-  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: 'Roboto Regular';
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto Thin";
-  src: url("./assets/fonts/Roboto-Thin.ttf") format("truetype");
+  font-family: 'Roboto Thin';
+  src: url('./assets/fonts/Roboto-Thin.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Train One";
-  src: url("./assets/fonts/TrainOne-Regular.ttf") format("truetype");
+  font-family: 'Train One';
+  src: url('./assets/fonts/TrainOne-Regular.ttf') format('truetype');
+}
+.main-title {
+  padding: 50px 0;
+  font-weight: 600;
+  color: #344a33;
+  position: relative;
+  width: fit-content;
+  &::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    position: absolute;
+    background-color: #ad7e86;
+    left: 0;
+    bottom: 40px;
+    animation: fadeIn 1s 5s backwards;
+  }
 }

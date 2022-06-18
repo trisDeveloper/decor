@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./index.scss";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './index.scss';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
@@ -12,33 +12,35 @@ function Navbar() {
   window.onscroll = () => {
     let currentScrollPos = window.pageYOffset;
     if (currentScrollPos !== 0) {
-      document.getElementById("navbar").style.backgroundColor = "black";
+      document.getElementById('navbar').style.backgroundColor = 'black';
     } else {
-      document.getElementById("navbar").style.backgroundColor = "transparent";
+      document.getElementById('navbar').style.backgroundColor = 'transparent';
     }
     if (prevScrollpos > currentScrollPos) {
-      document.getElementById("navbar").style.top = "0";
+      document.getElementById('navbar').style.top = '0';
     } else {
-      document.getElementById("navbar").style.top = "-50px";
+      document.getElementById('navbar').style.top = '-50px';
     }
     prevScrollpos = currentScrollPos;
   };
+
+  // let currentScrollPos = window.pageYOffset;
+  // if (currentScrollPos !== 0) {
+  //   document.getElementById('navbar').style.backgroundColor = 'black';
+  // } else {
+  //   document.getElementById('navbar').style.backgroundColor = 'transparent';
+  // }
 
   /* for a responsive navbar and toggeling the menu icon. u know   */
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  /* if (click) {
-    document.getElementById("navbar").style.backgroundColor = "black";
-  } else {
-    let currentScrollPos = window.pageYOffset;
-    if (currentScrollPos !== 0) {
-      document.getElementById("navbar").style.backgroundColor = "black";
-    } else {
-      document.getElementById("navbar").style.backgroundColor = "transparent";
-    }
-  }*/
+
+  if (click) {
+    document.getElementById('navbar').style.backgroundColor = 'black';
+  }
+
   return (
     <>
       <nav className="navbar" id="navbar">
@@ -56,7 +58,7 @@ function Navbar() {
           <ul
             className="links"
             id="links"
-            style={click ? { bottom: 0 } : { bottom: 100 + "%" }}
+            style={click ? { bottom: 0 } : { bottom: 100 + '%' }}
           >
             <li className="nav-item">
               <Link to="/" className="link" onClick={closeMobileMenu}>

@@ -1,0 +1,46 @@
+.steps {
+  background: #ccffd79e;
+  background: #ffdde3a3;
+  background: #c3f1ffa3;
+  background: #feffc39e;
+  .step-1,
+  .step-2,
+  .step-3 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    padding: 50px 0;
+  }
+  .content {
+    width: 50%;
+    padding-right: 50px;
+
+    h2 {
+      color: rgb(173 126 134);
+      padding: 25px 0;
+    }
+    p {
+      line-height: 2em;
+      font-size: 18px;
+      color: #000;
+      line-height: 1.9em;
+    }
+  }
+  .images {
+    width: 50%;
+    overflow: hidden;
+  }
+  img {
+    width: 70px;
+  }
+}
+@media (min-width: 768px) {
+  .steps {
+    padding: 50px 0;
+  }
+  .container {
+    padding: 0 98px !important;
+  }
+}

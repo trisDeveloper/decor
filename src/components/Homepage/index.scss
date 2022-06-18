@@ -28,7 +28,7 @@
     justify-content: center;
     max-width: 600px;
     h1 {
-      font-family: "Train One";
+      font-family: 'Train One';
       font-weight: 500;
       text-shadow: 3px 3px 3px #85a77e;
       margin: 0;
@@ -50,14 +50,19 @@
       border-radius: 0;
       padding: 12.5px 20px;
       display: flex;
-      font-size: 14px;
+      font-size: 15px;
+      background: linear-gradient(to right, #ffc0cb33 50%, transparent 50%);
       background-color: transparent;
+      text-decoration: none;
       align-items: center;
       justify-content: center;
       animation: fadeIn 1s 3s backwards;
+      transition: all 0.7s;
+      background-size: 200% 100%;
+      background-position: right bottom;
       &:hover,
       &:focus {
-        background: #ffc0cb33;
+        background-position: left bottom;
         color: #f7f7f7;
         font-weight: bold;
       }

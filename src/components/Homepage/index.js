@@ -1,8 +1,9 @@
-import "./index.scss";
-import React, { useState } from "react";
-import videoback from "./../../assets/images/39.mp4";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import './index.scss';
+import React, { useState } from 'react';
+import videoback from './../../assets/images/39.mp4';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
+import Steps from './Steps';
 
 function Index() {
   const AnimatedLetters = ({ letterClass, strArray, idx }) => {
@@ -16,8 +17,8 @@ function Index() {
       </span>
     );
   };
-  const [letterClass] = useState("text-animate");
-  const nameArray = ["Wanna", " ", "Change", " ", "Your", " ", "DECORATION!"];
+  const [letterClass] = useState('text-animate');
+  const nameArray = ['Wanna', ' ', 'Change', ' ', 'Your', ' ', 'DECORATION!'];
   let idxnum = nameArray.length;
 
   return (
@@ -37,16 +38,17 @@ function Index() {
               I know that you are here for it. Lol no kidding, you wanna see if
               u can hire me or not.
             </div>
-            <button className="more">
+            <a href="#gallery" className="more">
               Explore more
               <FontAwesomeIcon
                 className="btn-arrow"
                 icon={faArrowRightLong}
               ></FontAwesomeIcon>
-            </button>
+            </a>
           </div>
         </div>
       </div>
+      <Steps />
     </>
   );
 }

@@ -11,8 +11,8 @@
     animation: fadeIn 1s 3.7s backwards;
     z-index: 9999;
     &::after {
-      content: "";
-      background-color: white;
+      content: '';
+      background-color: #ad7e86;
       position: fixed;
       height: 50px;
       bottom: 0;
@@ -22,13 +22,13 @@
       padding-bottom: 20px;
       cursor: pointer;
       font-size: 20px;
-      color: white;
+      color: #ad7e86;
     }
     .ig:hover {
       color: pink;
     }
     .fb:hover {
-      color: rgb(47, 66, 195);
+      color: rgb(84, 101, 210);
     }
     .tw:hover {
       color: rgb(100, 178, 231);
