@@ -2,7 +2,7 @@
   "name": "project",
   "version": "0.1.0",
   "homepage": "https://trisBouden.github.io/decor",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
