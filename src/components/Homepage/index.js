@@ -1,5 +1,5 @@
 import "./index.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import videoback from "./../../assets/images/39.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
