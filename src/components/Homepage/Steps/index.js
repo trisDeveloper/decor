@@ -3,6 +3,9 @@ import oldroom from './../../../assets/images/04.jpg';
 import oldkitchen from './../../../assets/images/16.jpg';
 import styleone from './../../../assets/images/35.jpg';
 import styletwo from './../../../assets/images/36.jpg';
+import plant from './../../../assets/images/07.jpg';
+import plantsofa from './../../../assets/images/08.jpg';
+import plantwall from './../../../assets/images/09.jpg';
 import './index.scss';
 function Index() {
   return (
@@ -19,8 +22,8 @@ function Index() {
             </p>
           </div>
           <div className="images">
-            <img src={oldroom} />
-            <img src={oldkitchen} />
+            <img src={oldroom} alt="empty room" />
+            <img src={oldkitchen} alt="old kitchen" />
           </div>
         </div>
         <div className="step-2">
@@ -33,7 +36,8 @@ function Index() {
             </p>
           </div>
           <div className="images">
-            <img src={oldroom} />
+            <img src={styleone} alt="dark home style" />
+            <img src={styletwo} alt="light home style" />
           </div>
         </div>
         <div className="step-3">
@@ -46,7 +50,9 @@ function Index() {
             </p>
           </div>
           <div className="images">
-                        <img src={oldkitchen} />
+            <img src={plantsofa} alt="planet sofa" />
+            <img src={plantwall} alt="planet sofa" />
+            <img src={plant} alt="planet sofa" />
           </div>
         </div>
       </div>

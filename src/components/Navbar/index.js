@@ -8,27 +8,40 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 function Navbar() {
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
   let prevScrollpos = window.pageYOffset;
-
+  let navbar = document.getElementById('navbar');
   window.onscroll = () => {
     let currentScrollPos = window.pageYOffset;
     if (currentScrollPos !== 0) {
-      document.getElementById('navbar').style.backgroundColor = 'black';
+      navbar.style.backgroundColor = 'black';
     } else {
-      document.getElementById('navbar').style.backgroundColor = 'transparent';
+      navbar.style.backgroundColor = 'transparent';
     }
     if (prevScrollpos > currentScrollPos) {
-      document.getElementById('navbar').style.top = '0';
+      navbar.style.top = '0';
     } else {
-      document.getElementById('navbar').style.top = '-50px';
+      navbar.style.top = '-50px';
     }
     prevScrollpos = currentScrollPos;
   };
-
+  const changenavcolor = () => {
+    if (navbar) {
+      if (!click) {
+        navbar.style.backgroundColor = 'black';
+      } else {
+        let currentScrollPos = window.pageYOffset;
+        if (currentScrollPos !== 0) {
+          navbar.style.backgroundColor = 'black';
+        } else {
+          navbar.style.backgroundColor = 'transparent';
+        }
+      }
+    }
+  };
   // let currentScrollPos = window.pageYOffset;
   // if (currentScrollPos !== 0) {
-  //   document.getElementById('navbar').style.backgroundColor = 'black';
+  //  navbar.style.backgroundColor = 'black';
   // } else {
-  //   document.getElementById('navbar').style.backgroundColor = 'transparent';
+  //  navbar.style.backgroundColor = 'transparent';
   // }
 
   /* for a responsive navbar and toggeling the menu icon. u know   */
@@ -36,10 +49,6 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  if (click) {
-    document.getElementById('navbar').style.backgroundColor = 'black';
-  }
 
   return (
     <>
@@ -52,7 +61,14 @@ function Navbar() {
             </div>
           </Link>
 
-          <div className="menu-icon" id="menu-icon" onClick={handleClick}>
+          <div
+            className="menu-icon"
+            id="menu-icon"
+            onClick={() => {
+              handleClick();
+              changenavcolor();
+            }}
+          >
             <FontAwesomeIcon className="icon" icon={click ? faTimes : faBars} />
           </div>
           <ul
