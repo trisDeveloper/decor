@@ -4,6 +4,7 @@ import videoback from './../../assets/images/39.mp4';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 import Steps from './Steps';
+import Ourclients from './Ourclients';
 
 function Index() {
   const AnimatedLetters = ({ letterClass, strArray, idx }) => {
@@ -49,6 +50,7 @@ function Index() {
         </div>
       </div>
       <Steps />
+      <Ourclients />
     </>
   );
 }
