@@ -1,5 +1,7 @@
 .steps {
-  background: #feffc39e;
+  background: #feffde;
+  position: relative;
+  z-index: 2;
   .step-1,
   .step-2,
   .step-3 {
@@ -9,8 +11,9 @@
     position: relative;
     align-content: center;
     align-items: center;
-    height: 100vh;
-    padding: 50px 0;
+    height: calc(100vh - 136px);
+    padding: 0;
+    padding-bottom: 50px;
     gap: 10%;
   }
   .content {
@@ -18,7 +21,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     position: relative;
     &::before {
@@ -107,6 +109,7 @@
     }
   }
   .step-3 {
+    z-index: 9;
     .content::before {
       content: '03';
     }
@@ -146,7 +149,7 @@
 }
 @media (min-width: 768px) {
   .steps {
-    padding: 50px 0;
+    padding: 0;
   }
   .container {
     padding: 0 98px !important;
@@ -155,10 +158,6 @@
 @media (min-width: 992px) {
   .steps {
     .container {
-      .step-1,
-      .step-2,
-      .step-3 {
-      }
       .content {
         width: 45%;
         height: 100%;
