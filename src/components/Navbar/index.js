@@ -8,23 +8,40 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 function Navbar() {
   const navbar = useRef();
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+  // let prevScrollpos = window.pageYOffset;
+  // useEffect(() => {
+  //   window.onscroll = () => {
+  //     let currentScrollPos = window.pageYOffset;
+  //     if (currentScrollPos !== 0) {
+  //       navbar.current.style.backgroundColor = 'black';
+  //       if (prevScrollpos > currentScrollPos) {
+  //         navbar.current.style.top = '0';
+  //       } else {
+  //         navbar.current.style.top = '-50px';
+  //       }
+  //       prevScrollpos = currentScrollPos;
+  //     } else {
+  //       navbar.current.style.backgroundColor = 'transparent';
+  //     }
+  //   };
+  // }, [prevScrollpos]);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const [navcolor, setNavcolor] = useState(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 50) || currentScrollPos < 10);
+    setNavcolor(currentScrollPos !== 0);
+    setPrevScrollPos(currentScrollPos);
+  };
   useEffect(() => {
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = () => {
-      let currentScrollPos = window.pageYOffset;
-      if (currentScrollPos !== 0) {
-        navbar.current.style.backgroundColor = 'black';
-        if (prevScrollpos > currentScrollPos) {
-          navbar.current.style.top = '0';
-        } else {
-          navbar.current.style.top = '-50px';
-        }
-        prevScrollpos = currentScrollPos;
-      } else {
-        navbar.current.style.backgroundColor = 'transparent';
-      }
-    };
-  }, []);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+
+  }, [prevScrollPos, visible, navcolor, handleScroll]);
+
   /* for a responsive navbar and toggeling the menu icon. u know   */
 
   const [click, setClick] = useState(false);
@@ -40,7 +57,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar" id="navbar" ref={navbar}>
+      <nav className="navbar" id="navbar" ref={navbar} style={{top: visible ? '0' : '-50px', background: navcolor ? 'black': 'transparent' }}>
         <div className="container">
           <Link to="/" className="logo">
             <div className="logo-first">D</div>
