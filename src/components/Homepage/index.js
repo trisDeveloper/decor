@@ -1,5 +1,6 @@
 import './index.scss';
 import React, { useState } from 'react';
+//import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import videoback from './../../assets/images/39.mp4';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';

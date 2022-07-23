@@ -15,7 +15,7 @@
       border-radius: 3px;
       max-width: 280px;
       transition: all 0.3s;
-      height: 150px;
+      height: 120px;
       align-items: center;
       filter: grayscale(100%);
       transition: all 0.3s;
@@ -25,6 +25,7 @@
       }
       &:hover {
         filter: grayscale(0%);
+        height: 150px;
         border-color: #344a33;
       }
     }
@@ -32,6 +33,7 @@
       filter: grayscale(0%);
       background: #ad7e865b;
       border-color: #ad7e86;
+      height: 150px;
     }
   }
   @media (min-width: 768px) {
