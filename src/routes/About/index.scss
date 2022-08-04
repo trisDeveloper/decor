@@ -1,0 +1,210 @@
+.about {
+  .header {
+    height: 70vh;
+    justify-content: center;
+    margin-bottom: 30vh;
+    .container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      .content {
+        max-width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        align-content: center;
+        overflow: visible;
+        align-items: center;
+        position: relative;
+        .teamdiv {
+          max-width: 600px;
+          width: 100%;
+          position: absolute;
+          top: 40vh;
+          border: 2px solid #ad7e86;
+          padding: 10px;
+          background: #9f818363;
+          transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+          .team {
+            max-width: 100%;
+            border: 2px solid #ad7e86;
+          }
+        }
+      }
+    }
+
+    .background {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  .ourinfo {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 2;
+    .container {
+      .our1,
+      .our2,
+      .our3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        align-content: center;
+        align-items: center;
+        padding: 0;
+        padding: 70px 0;
+        gap: 10%;
+        .content {
+          min-width: 260px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          span {
+            color: #344a335c;
+            font-weight: 800;
+            position: absolute;
+            font-size: 100px;
+            z-index: -1;
+            left: 50%;
+            transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+            top: 75px;
+            transform: translate(-50%, -50%);
+          }
+          h2 {
+            color: rgb(173 126 134);
+            padding: 25px 0;
+            text-shadow: -2px 3px 2px black;
+            opacity: 0;
+            transition: all 0.3s;
+          }
+          p {
+            line-height: 2em;
+            font-size: 18px;
+            color: #000;
+            line-height: 1.9em;
+            transition: all 0.3s;
+            opacity: 0;
+          }
+          h2.active {
+            animation: fadeIn 1s forwards;
+          }
+          p.active {
+            animation: fadeIn 1s 0.5s forwards;
+          }
+        }
+        .images {
+          min-width: 260px;
+          width: 100%;
+          img,
+          video {
+            max-width: 100%;
+            right: 0;
+            top: 0;
+            border: 2px solid #ad7e86;
+            object-fit: cover;
+          }
+        }
+      }
+      .our3 {
+        .members {
+          padding: 30px 0;
+        }
+        .member {
+          width: 200px;
+          text-align: center;
+        }
+        .blur {
+          width: 200px;
+          height: 250px;
+          border: 2px solid #ad7e86;
+          padding: 5px;
+          transition: all 0.3s ease-in-out;
+          img {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #ad7e86;
+            object-fit: cover;
+            filter: blur(5px);
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover {
+            img {
+              filter: blur(0px);
+            }
+          }
+        }
+
+        h4,
+        .job,
+        .desc {
+          text-align: left;
+        }
+        h4 {
+          padding-top: 20px;
+          font-weight: 900;
+          color: black;
+          font-size: 20px;
+        }
+        .job {
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: -0.5px;
+          color: #213b11;
+        }
+        .desc {
+          font-size: 16px;
+          padding: 10px 0;
+          letter-spacing: -1px;
+          color: #444;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      .container {
+        .our1,
+        .our2 {
+          .content {
+            width: 45%;
+            height: 100%;
+          }
+          .images {
+            width: 45%;
+            height: 100%;
+          }
+        }
+      }
+      .our2 {
+        .content {
+          order: 2;
+        }
+        .images {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ourinfo {
+    padding: 0;
+  }
+  .container {
+    padding: 0 98px !important;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

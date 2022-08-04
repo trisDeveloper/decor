@@ -33,7 +33,6 @@
         padding: 45px 0 30px 0;
         width: 100%;
         justify-content: space-between;
-        justify-content: center;
         .about-web {
           max-width: 400px;
           line-height: 2em;
@@ -98,6 +97,7 @@
     @media (max-width: 992px) {
       .container {
         .info {
+          justify-content: center;
           .about-web {
             display: none;
           }

@@ -1,31 +1,29 @@
 .clients {
   padding: 30px 0;
   .flex-box {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 20px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
     .client {
       padding: 10px;
       margin: 5px;
       display: flex;
       border: 1px solid #5e5e5e;
       border-radius: 3px;
-      max-width: 280px;
+      width: 200px;
       transition: all 0.3s;
       height: 120px;
       align-items: center;
       filter: grayscale(100%);
       transition: all 0.3s;
+      .member {
+        width: 200px;
+        text-align: center;
+      }
       img {
         width: 100%;
         max-height: 100%;
+        object-fit: cover;
       }
       &:hover {
         filter: grayscale(0%);
-        height: 150px;
         border-color: #344a33;
       }
     }
@@ -33,7 +31,6 @@
       filter: grayscale(0%);
       background: #ad7e865b;
       border-color: #ad7e86;
-      height: 150px;
     }
   }
   @media (min-width: 768px) {

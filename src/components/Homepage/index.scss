@@ -1,8 +1,10 @@
 .header {
   position: relative;
-  min-height: 100vh;
+  display: flex;
+  height: 100vh;
   width: 100%;
   background-size: cover;
+  align-items: center;
   background-color: #143005b0;
   video {
     object-fit: cover;
@@ -18,7 +20,6 @@
   }
 
   .content {
-    min-height: 100vh;
     width: 100%;
     overflow: hidden;
     color: white;
@@ -41,7 +42,7 @@
       padding: 0 0 40px 0;
       font-weight: 300;
       font-size: 19px;
-      animation: fadeIn 1s 2.5s backwards;
+      animation: fadeIn 1s 4s backwards;
     }
     .more {
       color: pink;
@@ -56,7 +57,7 @@
       text-decoration: none;
       align-items: center;
       justify-content: center;
-      animation: fadeIn 1s 3s backwards;
+      animation: fadeIn 1s 5s backwards;
       transition: all 0.7s;
       background-size: 200% 100%;
       background-position: right bottom;
@@ -93,7 +94,7 @@
 .text-animate {
   display: inline-block;
   opacity: 0;
-  animation: fadeIn 1s 1s;
+  animation: fadeIn 1s 2s;
   animation-fill-mode: forwards;
   min-width: 10px;
 }

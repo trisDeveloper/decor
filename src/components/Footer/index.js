@@ -26,7 +26,7 @@ function Footer() {
                 <Link to="/about">About Us</Link>
               </div>
             </div>
-            <div className="contact">
+            <div className="contact" id="contact">
               <h2>Get In Touch</h2>
               <form
                 action="https://formsubmit.co/f640b5a7e168ab2b4cd4b5c7ac5b4269"

@@ -31,7 +31,11 @@ function Navbar() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 50) || currentScrollPos < 10);
+    setVisible(
+      (prevScrollPos > currentScrollPos &&
+        prevScrollPos - currentScrollPos > 50) ||
+        currentScrollPos < 10
+    );
     setNavcolor(currentScrollPos !== 0);
     setPrevScrollPos(currentScrollPos);
   };
@@ -39,7 +43,6 @@ function Navbar() {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-
   }, [prevScrollPos, visible, navcolor, handleScroll]);
 
   /* for a responsive navbar and toggeling the menu icon. u know   */
@@ -57,7 +60,15 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar" id="navbar" ref={navbar} style={{top: visible ? '0' : '-50px', background: navcolor ? 'black': 'transparent' }}>
+      <nav
+        className="navbar"
+        id="navbar"
+        ref={navbar}
+        style={{
+          top: visible ? '0' : '-50px',
+          background: navcolor ? 'black' : 'transparent',
+        }}
+      >
         <div className="container">
           <Link to="/" className="logo">
             <div className="logo-first">D</div>
@@ -90,9 +101,9 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="#contact" className="link" onClick={closeMobileMenu}>
+              <a href="#contact" className="link" onClick={closeMobileMenu}>
                 Contact us
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

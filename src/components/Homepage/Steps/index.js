@@ -37,19 +37,16 @@ function Index() {
     let step3offset =
       window.scrollY + step3.current.getBoundingClientRect().top;
     window.onscroll = () => {
-      let mainY = window.scrollY + (window.innerHeight / 2);
+      let mainY = window.scrollY + window.innerHeight / 2;
       if (mainY >= step1offset && mainY <= step2offset) {
         states = [true, false, false];
         setIsActive(states);
-        
+
         steps.current.style.backgroundColor = '#feffde';
-      } else if (
-        mainY >= step2offset &&
-        mainY <= step3offset
-      ) {
+      } else if (mainY >= step2offset && mainY <= step3offset) {
         states = [false, true, false];
         setIsActive(states);
-        
+
         steps.current.style.backgroundColor = '#d9f6ff';
       } else if (
         mainY >= step3offset &&
@@ -57,7 +54,7 @@ function Index() {
       ) {
         states = [false, false, true];
         setIsActive(states);
-        
+
         steps.current.style.backgroundColor = '#ffe9ed';
       }
     };
@@ -67,9 +64,11 @@ function Index() {
       <div className="container">
         <h2 className="main-title">How Do We Work!</h2>
         <div className="step-1" id="step-1" ref={step1}>
-          <div className='content'>
-            <span style={{ left: span1 - 900}}>01</span>
-            <h2 className={`${isActive[0] ? 'active' : ''}`}>Look At Your Space</h2>
+          <div className="content">
+            <span style={{ left: span1 - 900 }}>01</span>
+            <h2 className={`${isActive[0] ? 'active' : ''}`}>
+              Look At Your Space
+            </h2>
             <p className={`${isActive[0] ? 'active' : ''}`}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Inventores, placeat omnis odio quam eaque quia eligendi numquam
@@ -86,9 +85,11 @@ function Index() {
           </div>
         </div>
         <div className="step-2" id="step-2" ref={step2}>
-          <div className='content'>
-            <span style={{ left: span2 - 900 - window.innerHeight}}>02</span>
-            <h2 className={`${isActive[1] ? 'active' : ''}`}>See What Style You Like</h2>
+          <div className="content">
+            <span style={{ left: span2 - 900 - window.innerHeight }}>02</span>
+            <h2 className={`${isActive[1] ? 'active' : ''}`}>
+              See What Style You Like
+            </h2>
             <p className={`${isActive[1] ? 'active' : ''}`}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Inventores, placeat omnis odio quam eaque quia eligendi numquam
@@ -109,9 +110,13 @@ function Index() {
           </div>
         </div>
         <div className="step-3" id="step-3" ref={step3}>
-          <div className='content'>
-            <span style={{ left: span3 - 900 - (window.innerHeight * 2)}}>03</span>
-            <h2 className={`${isActive[2] ? 'active' : ''}`}>Make The Best Collection</h2>
+          <div className="content">
+            <span style={{ left: span3 - 900 - window.innerHeight * 2 }}>
+              03
+            </span>
+            <h2 className={`${isActive[2] ? 'active' : ''}`}>
+              Make The Best Collection
+            </h2>
             <p className={`${isActive[2] ? 'active' : ''}`}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Inventores, placeat omnis odio quam eaque quia eligendi numquam

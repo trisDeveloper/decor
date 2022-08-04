@@ -1,33 +1,22 @@
 body {
   font-family: monospace;
 }
-
+.loader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 99999;
+  transition: all 0.3s ease;
+}
 @import 'animate.css';
 
-@font-face {
-  font-family: 'Roboto Black';
-  src: url('./assets/fonts/Roboto-Black.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Robot bold';
-  src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto Light';
-  src: url('./assets/fonts/Roboto-Light.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto Medium';
-  src: url('./assets/fonts/Roboto-Medium.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto Regular';
-  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto Thin';
-  src: url('./assets/fonts/Roboto-Thin.ttf') format('truetype');
-}
 @font-face {
   font-family: 'Train One';
   src: url('./assets/fonts/TrainOne-Regular.ttf') format('truetype');
