@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/decor/static/css/main.0972f931.css",
-    "main.js": "/decor/static/js/main.f1bda03e.js",
+    "main.css": "/decor/static/css/main.173685f0.css",
+    "main.js": "/decor/static/js/main.964f14ab.js",
     "static/js/787.ec704a7a.chunk.js": "/decor/static/js/787.ec704a7a.chunk.js",
+    "static/media/about08.mp4": "/decor/static/media/about08.454e6ca0cafc445c6c55.mp4",
     "static/media/39.mp4": "/decor/static/media/39.20bc73fea06b46720256.mp4",
     "static/media/07.jpg": "/decor/static/media/07.a9288cf07476d44aa0ca.jpg",
+    "static/media/about11.jpg": "/decor/static/media/about11.f09343ae6edabaf35dcb.jpg",
+    "static/media/about07.jpg": "/decor/static/media/about07.da65fa83f74a917bdf13.jpg",
+    "static/media/gallery30.jpg": "/decor/static/media/gallery30.4004fe921a84c9a24dec.jpg",
+    "static/media/about06.jpg": "/decor/static/media/about06.be20c768da18c2836170.jpg",
+    "static/media/about04.jpg": "/decor/static/media/about04.fe18e6f446fe1f8b6e4e.jpg",
+    "static/media/about05.jpg": "/decor/static/media/about05.f4ca2da0c078b658d1f6.jpg",
+    "static/media/about03.jpg": "/decor/static/media/about03.1a083d239e6e18870ec0.jpg",
+    "static/media/about02.jpg": "/decor/static/media/about02.bb3acd0e67e59fa64130.jpg",
     "static/media/TrainOne-Regular.ttf": "/decor/static/media/TrainOne-Regular.2af777d61f9f995b70ad.ttf",
     "static/media/09.jpg": "/decor/static/media/09.cc7e667e3a178aa271f2.jpg",
     "static/media/04.jpg": "/decor/static/media/04.d91213187d46dd413f9d.jpg",
+    "static/media/about01.jpg": "/decor/static/media/about01.7387ffd2e900b0755b11.jpg",
     "static/media/36.jpg": "/decor/static/media/36.d30ab02034294b13c898.jpg",
     "static/media/16.jpg": "/decor/static/media/16.36a055262be5f42fcda7.jpg",
     "static/media/08.jpg": "/decor/static/media/08.c496c003855756d09cb3.jpg",
@@ -15,12 +25,6 @@
     "static/media/zevent.png": "/decor/static/media/zevent.3fcd47174c9e0e334491.png",
     "static/media/30.jpg": "/decor/static/media/30.5bdc136642b2a593df50.jpg",
     "static/media/smuckers.png": "/decor/static/media/smuckers.1afb81e2a514544c03e7.png",
-    "static/media/Roboto-Medium.ttf": "/decor/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
-    "static/media/Roboto-Thin.ttf": "/decor/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
-    "static/media/Roboto-Regular.ttf": "/decor/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
-    "static/media/Roboto-Black.ttf": "/decor/static/media/Roboto-Black.cf56c1b149d0a5e8d7c6.ttf",
-    "static/media/Roboto-Bold.ttf": "/decor/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
-    "static/media/Roboto-Light.ttf": "/decor/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
     "static/media/westfield.png": "/decor/static/media/westfield.a3a3be898c93f8a72804.png",
     "static/media/westinghouse.png": "/decor/static/media/westinghouse.ef1f1d9a9a050c62ff66.png",
     "static/media/astrazeneca.png": "/decor/static/media/astrazeneca.6d813c36e465409d600a.png",
@@ -31,12 +35,12 @@
     "static/media/knibctap.png": "/decor/static/media/knibctap.afcaa81639a61e012994.png",
     "static/media/tim.png": "/decor/static/media/tim.e30c3064b378e5ba72b6.png",
     "index.html": "/decor/index.html",
-    "main.0972f931.css.map": "/decor/static/css/main.0972f931.css.map",
-    "main.f1bda03e.js.map": "/decor/static/js/main.f1bda03e.js.map",
+    "main.173685f0.css.map": "/decor/static/css/main.173685f0.css.map",
+    "main.964f14ab.js.map": "/decor/static/js/main.964f14ab.js.map",
     "787.ec704a7a.chunk.js.map": "/decor/static/js/787.ec704a7a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0972f931.css",
-    "static/js/main.f1bda03e.js"
+    "static/css/main.173685f0.css",
+    "static/js/main.964f14ab.js"
   ]
 }
